@@ -1,0 +1,45 @@
+@use "../../styles/base/variables" as *;
+@use "../../styles/utils/mixins.scss" as *;
+
+header {
+  background: $background-gradient;
+  color: $primary-color;
+  font-family: $font-family;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 15vh;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 20vw;
+
+  h1 {
+    font-size: 1.5vw;
+  }
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+
+  width: 25vw;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: $primary-color;
+  font-size: 1.5rem;
+
+  &.active {
+    border-top: 2px solid $primary-color;
+  }
+
+  @include border-bottom-to-right(0.6s, 2px, $primary-color);
+}
