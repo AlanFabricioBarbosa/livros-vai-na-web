@@ -37,8 +37,13 @@ export default function Home() {
             Doe seu livro
           </Link>
         </nav>
-        <section>
-          <input name="search" type="text" placeholder="O que você procura?" />
+        <section className={S["input-btn"]}>
+          <input
+            name="search"
+            type="text"
+            placeholder="O que você procura?"
+            disabled
+          />
           <FaSearch />
         </section>
       </header>

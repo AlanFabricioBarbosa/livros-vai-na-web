@@ -30,16 +30,42 @@ header {
   justify-content: space-around;
 
   width: 25vw;
+
+  .nav-link {
+    text-decoration: none;
+    color: $primary-color;
+    font-size: 1.5rem;
+
+    &.active {
+      border-bottom: 2px solid $primary-color;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+        -2px -2px 4px rgba(0, 123, 255, 0.3);
+    }
+
+    @include border-bottom-to-right(0.6s, 2px, $primary-color);
+  }
 }
 
-.nav-link {
-  text-decoration: none;
-  color: $primary-color;
-  font-size: 1.5rem;
+.input-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $primary-color;
+  border-radius: 20px;
 
-  &.active {
-    border-top: 2px solid $primary-color;
+  width: 15vw;
+  height: 5vh;
+
+  input {
+    font-size: 1vw;
+    color: $primary-color;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: $primary-color;
+    }
   }
-
-  @include border-bottom-to-right(0.6s, 2px, $primary-color);
 }
