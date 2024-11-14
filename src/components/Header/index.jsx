@@ -1,12 +1,16 @@
+import { useState } from "react";
 import { Link, useMatch } from "react-router-dom";
 import Logo from "../../assets/img/logo.png";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import S from "./style.module.scss";
 
 export default function Home() {
   const matchHome = useMatch("/");
   const matchDonatedBooks = useMatch("/donatedBooks");
   const matchToDonatedBooks = useMatch("/ToDonatedBooks");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <>
@@ -15,7 +19,7 @@ export default function Home() {
           <img src={Logo} alt="" />
           <h1>Livros Vai na Web</h1>
         </section>
-        <nav className={S["nav-container"]}>
+        <nav className={`${S["nav-container"]} ${isMenuOpen ? S.open : ""}`}>
           <Link
             to="/"
             className={`${S["nav-link"]} ${matchHome ? S.active : ""}`}
@@ -46,6 +50,9 @@ export default function Home() {
           />
           <FaSearch />
         </section>
+        <button className={S["menu-toggle"]} onClick={toggleMenu}>
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
       </header>
     </>
   );

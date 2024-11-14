@@ -5,19 +5,63 @@ header {
   background: $background-gradient;
   color: $primary-color;
   font-family: $font-family;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   height: 15vh;
+  position: relative;
+
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: $primary-color;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+
+    .nav-container {
+      display: none;
+      position: absolute;
+      top: 15vh;
+      right: 0;
+      background: $background-gradient;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      padding: 1rem 0;
+
+      &.open {
+        display: flex;
+      }
+
+      .nav-link {
+        padding: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+
+    .input-btn {
+      display: none;
+    }
+
+    .title-container {
+      width: auto;
+    }
+  }
 }
 
 .title-container {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-
   width: 20vw;
 
   h1 {
@@ -28,7 +72,6 @@ header {
 .nav-container {
   display: flex;
   justify-content: space-around;
-
   width: 25vw;
 
   .nav-link {
@@ -53,7 +96,6 @@ header {
   justify-content: center;
   border: 1px solid $primary-color;
   border-radius: 20px;
-
   width: 15vw;
   height: 5vh;
 
