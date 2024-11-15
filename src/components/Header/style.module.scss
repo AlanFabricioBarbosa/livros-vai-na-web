@@ -11,6 +11,80 @@ header {
   height: 15vh;
   position: relative;
 
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20vw;
+
+    h1 {
+      font-size: 1.5vw;
+    }
+
+    @media (max-width: 768px) {
+      img {
+        width: 9vw;
+      }
+
+      h1 {
+        font-size: 4.5vw;
+      }
+    }
+
+    @media (max-width: 1180px) {
+      img {
+        width: 7vw;
+      }
+
+      h1 {
+        font-size: 4vw;
+      }
+    }
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-around;
+    width: 32vw;
+
+    .nav-link {
+      text-decoration: none;
+      color: $primary-color;
+      font-size: 1.5rem;
+
+      &.active {
+        border-bottom: 2px solid $primary-color;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+          -2px -2px 4px rgba(0, 123, 255, 0.3);
+      }
+
+      @include border-bottom-to-right(0.6s, 2px, $primary-color);
+    }
+  }
+
+  .input-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $primary-color;
+    border-radius: 20px;
+    width: 15vw;
+    height: 5vh;
+
+    input {
+      font-size: 1vw;
+      color: $primary-color;
+      background-color: transparent;
+      border: none;
+      outline: none;
+
+      &::placeholder {
+        color: $primary-color;
+      }
+    }
+  }
+
   .menu-toggle {
     display: none;
     font-size: 2rem;
@@ -22,7 +96,7 @@ header {
     right: 1rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .menu-toggle {
       display: block;
     }
@@ -48,66 +122,12 @@ header {
       }
     }
 
+    .title-container {
+      width: 60%;
+    }
+
     .input-btn {
       display: none;
-    }
-
-    .title-container {
-      width: auto;
-    }
-  }
-}
-
-.title-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 20vw;
-
-  h1 {
-    font-size: 1.5vw;
-  }
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-around;
-  width: 25vw;
-
-  .nav-link {
-    text-decoration: none;
-    color: $primary-color;
-    font-size: 1.5rem;
-
-    &.active {
-      border-bottom: 2px solid $primary-color;
-      font-weight: bold;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
-        -2px -2px 4px rgba(0, 123, 255, 0.3);
-    }
-
-    @include border-bottom-to-right(0.6s, 2px, $primary-color);
-  }
-}
-
-.input-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid $primary-color;
-  border-radius: 20px;
-  width: 15vw;
-  height: 5vh;
-
-  input {
-    font-size: 1vw;
-    color: $primary-color;
-    background-color: transparent;
-    border: none;
-    outline: none;
-
-    &::placeholder {
-      color: $primary-color;
     }
   }
 }
