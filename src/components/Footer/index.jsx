@@ -1,10 +1,11 @@
 import { FaFacebook, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io";
+import S from "./style.module.scss";
 
 export default function Footer() {
   return (
-    <footer>
-      <section>
+    <footer className={S}>
+      <section className={S["contact-container"]}>
         <p>4002 - 8922</p>
         <ul>
           <li>
@@ -14,7 +15,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="Facebook"
             >
-              <FaFacebook />
+              <FaFacebook className={S["icons-contact"]} />
             </a>
           </li>
           <li>
@@ -24,7 +25,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="Twitter"
             >
-              <FaTwitter />
+              <FaTwitter className={S["icons-contact"]} />
             </a>
           </li>
           <li>
@@ -34,7 +35,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="YouTube"
             >
-              <FaYoutube />
+              <FaYoutube className={S["icons-contact"]} />
             </a>
           </li>
           <li>
@@ -44,7 +45,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
-              <IoLogoLinkedin />
+              <IoLogoLinkedin className={S["icons-contact"]} />
             </a>
           </li>
           <li>
@@ -54,12 +55,12 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
-              <FaInstagram />
+              <FaInstagram className={S["icons-contact"]} />
             </a>
           </li>
         </ul>
       </section>
-      <section>
+      <section className={S["text-content"]}>
         <p>Layout desenvolvido pela Vai Na Web para fins educativos - 2024</p>
       </section>
     </footer>

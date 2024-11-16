@@ -1,0 +1,48 @@
+@use "../../styles/base/variables" as *;
+
+footer {
+  font-family: $font-family;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container {
+  background-color: $tertiary-color;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 6vh;
+
+  p {
+    font-size: 1.8vw;
+    color: $primary-color;
+  }
+
+  ul {
+    list-style: none;
+
+    display: flex;
+    justify-content: space-around;
+
+    width: 20vw;
+
+    .icons-contact {
+      color: $primary-color;
+      font-size: 1.8vw;
+    }
+  }
+}
+
+.text-content {
+  background-color: $secondary-color;
+  color: $primary-color;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 4.5vh;
+}
