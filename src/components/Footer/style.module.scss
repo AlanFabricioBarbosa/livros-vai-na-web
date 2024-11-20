@@ -8,28 +8,35 @@ footer {
   .contact-container {
     background-color: $tertiary-color;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 12vh;
+    height: 11vh;
 
-    @media (max-width: 768px) {
-      flex-direction: column;
-      height: 12vh;
+    @media (max-width: 1080px) {
+      height: 7vh;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
+      padding: 2vw 0;
+      flex-direction: column;
+      height: 14vh;
     }
 
     p {
       font-size: 1.8vw;
       color: $primary-color;
+      margin-left: 5vw;
 
-      @media (max-width: 768px) {
-        font-size: 6.5vw;
+      @media (max-width: 1080px) {
+        font-size: 3vw;
       }
 
-      @media (max-width: 1024px) {
-        font-size: 4.2vw;
+      @media (max-width: 768px) {
+        font-size: 5.5vw;
+      }
+
+      @media (max-width: 485px) {
+        font-size: 6.5vw;
       }
     }
 
@@ -38,26 +45,27 @@ footer {
       display: flex;
       justify-content: space-around;
       width: 20vw;
+      margin-right: 5vw;
 
       @media (max-width: 768px) {
         justify-content: space-evenly;
         width: 60%;
       }
 
-      @media (max-width: 1024px) {
-        width: 35%;
-      }
-
       .icons-contact {
         color: $primary-color;
         font-size: 2vw;
 
-        @media (max-width: 768px) {
-          font-size: 7vw;
+        @media (max-width: 1080px) {
+          font-size: 3vw;
         }
 
-        @media (max-width: 1024px) {
-          font-size: 4vw;
+        @media (max-width: 768px) {
+          font-size: 5.5vw;
+        }
+
+        @media (max-width: 485px) {
+          font-size: 7vw;
         }
       }
     }
@@ -69,16 +77,20 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 5vh;
+    height: 4vh;
+
+    @media (max-width: 1080px) {
+      font-size: 2vw;
+    }
 
     @media (max-width: 768px) {
       text-align: center;
-      font-size: 4vw;
-      height: 8.5vh;
+      font-size: 3vw;
+      height: 9.5vh;
     }
 
-    @media (max-width: 1024px) {
-      font-size: 2.5vw;
+    @media (max-width: 485px) {
+      font-size: 4vw;
     }
   }
 }
