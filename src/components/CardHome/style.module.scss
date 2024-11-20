@@ -5,60 +5,87 @@
   display: flex;
   align-items: center;
 
+  @media (max-width: 769px) {
+    justify-content: center;
+  }
+
   .text-home-content {
     padding-top: 2vw;
     padding-left: 10vw;
     color: $tertiary-color;
     font-family: $font-family;
     font-weight: 500;
-    font-size: 2vw;
+    font-size: 2.5vw;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1080px) {
+      font-size: 4vw;
+    }
+
+    @media (max-width: 769px) {
+      font-size: 7.5vw;
+    }
+
+    @media (max-width: 485px) {
       font-size: 9vw;
-      text-align: center;
     }
   }
 }
 
 .card-home-container {
-  height: 50vh;
   display: grid;
   place-items: center;
+  margin-bottom: 6vw;
 
   .card-home-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2vw;
-    width: 80%;
+    gap: 5vw;
 
-    @media (max-width: 768px) {
+    @media (max-width: 769px) {
       grid-template-columns: repeat(2, 1fr);
       place-items: center;
-      width: 100%;
+    }
+
+    @media (max-width: 485px) {
+      grid-template-columns: repeat(1, 1fr);
+      place-items: center;
+      width: 90%;
     }
   }
 
   .card-home-item {
     border-radius: 5%;
     background-color: $quaternary-color;
-    width: 14vw;
+    width: 17vw;
     height: 35vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    @media (max-width: 768px) {
-      width: 45vw;
+    @media (max-width: 1080px) {
+      width: 20vw;
       height: 20vh;
+    }
+
+    @media (max-width: 769px) {
+      width: 40vw;
+    }
+
+    @media (max-width: 485px) {
+      width: 65vw;
     }
 
     img {
       width: 5vw;
       padding-bottom: 1vw;
 
-      @media (max-width: 768px) {
+      @media (max-width: 769px) {
         width: 12vw;
+      }
+
+      @media (max-width: 485px) {
+        width: 18vw;
       }
     }
 
@@ -68,8 +95,12 @@
       font-size: 1.1vw;
       font-family: $font-family;
 
-      @media (max-width: 768px) {
+      @media (max-width: 769px) {
         font-size: 3.5vw;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 4.5vw;
       }
     }
   }
