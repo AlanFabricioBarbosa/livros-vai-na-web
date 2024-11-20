@@ -19,25 +19,24 @@ header {
 
     h1 {
       font-size: 1.5vw;
+      font-weight: 700;
+
+      @media (max-width: 1080px) {
+        font-size: 4vw;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 5.5vw;
+      }
     }
 
-    @media (max-width: 768px) {
-      img {
+    img {
+      @media (max-width: 1080px) {
         width: 9vw;
       }
 
-      h1 {
-        font-size: 10vw;
-      }
-    }
-
-    @media (max-width: 1180px) {
-      img {
-        width: 7vw;
-      }
-
-      h1 {
-        font-size: 4vw;
+      @media (max-width: 768px) {
+        width: 13vw;
       }
     }
   }
@@ -50,16 +49,16 @@ header {
     .nav-link {
       text-decoration: none;
       color: $primary-color;
-      font-size: 1.5rem;
+      font-size: 1.5vw;
 
       &.active {
-        border-bottom: 2px solid $primary-color;
+        border-bottom: 0.1vw solid $primary-color;
         font-weight: bold;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
-          -2px -2px 4px rgba(0, 123, 255, 0.3);
+        text-shadow: 0.2vw 0.2vw 0.4vw rgba(0, 0, 0, 0.3),
+          -0.2vw -0.2vw 0.4vw rgba(0, 123, 255, 0.3);
       }
 
-      @include border-bottom-to-right(0.6s, 2px, $primary-color);
+      @include border-bottom-to-right(0.6s, 0.2vw, $primary-color);
     }
   }
 
@@ -67,8 +66,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid $primary-color;
-    border-radius: 20px;
+    border: 0.1vw solid $primary-color;
+    border-radius: 1.5vw;
     width: 15vw;
     height: 5vh;
 
@@ -87,16 +86,16 @@ header {
 
   .menu-toggle {
     display: none;
-    font-size: 2rem;
+    font-size: 6.5vw;
     color: $primary-color;
     background: none;
     border: none;
     cursor: pointer;
     position: absolute;
-    right: 1rem;
+    right: 5vw;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1080px) {
     .menu-toggle {
       display: block;
     }
@@ -110,20 +109,21 @@ header {
       flex-direction: column;
       width: 100%;
       align-items: center;
-      padding: 1rem 0;
+      padding: 5vw 0;
 
       &.open {
         display: flex;
       }
 
       .nav-link {
-        padding: 1rem;
-        font-size: 1.2rem;
+        padding: 2vw;
+        font-size: 4vw;
       }
     }
 
     .title-container {
-      width: 60%;
+      margin-right: 10vw;
+      width: 75%;
     }
 
     .input-btn {
