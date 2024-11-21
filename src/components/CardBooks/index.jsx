@@ -36,9 +36,7 @@ export default function CardBooks() {
           <img src={book.urlImg} alt={book.title} width="100" />
           <h3>{book.title}</h3>
           <p>Gênero: {book.genre}</p>
-          <p>
-            Autor{"(a)"}: {book.author}
-          </p>
+          <p>Por: {book.author}</p>
         </li>
       ))}
     </ul>
