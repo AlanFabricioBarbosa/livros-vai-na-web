@@ -1,0 +1,10 @@
+@use "../../styles/base/variables" as *;
+
+.text-to-donated-container {
+  text-align: center;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: $secondary-color;
+  margin-top: 3vw;
+}
