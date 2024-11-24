@@ -30,7 +30,7 @@ export default function Home() {
             to="/donatedBooks"
             className={`${S["nav-link"]} ${matchDonatedBooks ? S.active : ""}`}
           >
-            Livros doados
+            Livros Doados
           </Link>
           <Link
             to="/ToDonatedBooks"
@@ -38,7 +38,7 @@ export default function Home() {
               matchToDonatedBooks ? S.active : ""
             }`}
           >
-            Doe seu livro
+            Doe Seu Livro
           </Link>
         </nav>
         <section className={S["input-btn"]}>
