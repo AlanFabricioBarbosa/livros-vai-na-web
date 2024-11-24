@@ -6,8 +6,8 @@ import S from "./style.module.scss";
 
 export default function Home() {
   const matchHome = useMatch("/");
-  const matchDonatedBooks = useMatch("/donatedBooks");
-  const matchToDonatedBooks = useMatch("/ToDonatedBooks");
+  const matchDonatedBooks = useMatch("donatedBooks");
+  const matchToDonatedBooks = useMatch("ToDonatedBooks");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
