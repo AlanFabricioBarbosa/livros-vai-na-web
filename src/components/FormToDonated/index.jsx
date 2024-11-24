@@ -1,5 +1,5 @@
 import S from "./style.module.scss";
-import FormBook from "../../assets/img/formBook.png";
+import FormBook from "../../assets/img/formBookImg.png";
 
 export default function FormToDonated() {
   return (
