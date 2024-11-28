@@ -1,21 +1,37 @@
 @use "../../styles/base/variables" as *;
 @use "../../styles/utils/mixins.scss" as *;
 
-header {
+.header {
   background: $background-gradient;
   color: $primary-color;
   font-family: $font-family;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 15vh;
+  height: 13vh;
   position: relative;
+
+  @media (max-width: 1080px) {
+    height: 10vh;
+  }
+
+  @media (max-width: 768px) {
+    height: 12vh;
+  }
 
   .title-container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 20vw;
+
+    @media (max-width: 1080px) {
+      width: 55%;
+    }
+
+    @media (max-width: 768px) {
+      width: 70%;
+    }
 
     h1 {
       font-size: 1.5vw;
@@ -95,6 +111,17 @@ header {
     right: 5vw;
   }
 
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
   @media (max-width: 1080px) {
     .menu-toggle {
       display: block;
@@ -103,13 +130,18 @@ header {
     .nav-container {
       display: none;
       position: absolute;
-      top: 15vh;
+      top: 10vh;
       right: 0;
       background: $background-gradient;
       flex-direction: column;
       width: 100%;
       align-items: center;
       padding: 5vw 0;
+      z-index: 1000;
+
+      @media (max-width: 768px) {
+        top: 12vh;
+      }
 
       &.open {
         display: flex;
@@ -118,12 +150,15 @@ header {
       .nav-link {
         padding: 2vw;
         font-size: 4vw;
+
+        @media (max-width: 480px) {
+          font-size: 6vw;
+        }
       }
     }
 
-    .title-container {
-      margin-right: 10vw;
-      width: 75%;
+    .menu-overlay {
+      display: block;
     }
 
     .input-btn {

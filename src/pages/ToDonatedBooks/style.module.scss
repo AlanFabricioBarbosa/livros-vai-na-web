@@ -1,10 +1,24 @@
 @use "../../styles/base/variables" as *;
 
+.toDonatedBook-container {
+  @media (min-width: 769px) and (max-width: 1080px) {
+    height: 75vh;
+  }
+}
+
 .text-to-donated-container {
   text-align: center;
   font-family: $font-family;
   font-weight: 400;
   font-size: 1.5rem;
   color: $secondary-color;
-  margin-top: 3vw;
+  margin-top: 5vw;
+
+  @media (max-width: 485px) {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 1.1rem;
+  }
 }
