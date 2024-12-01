@@ -17,7 +17,10 @@ export default function Header() {
   return (
     <header className={S.header}>
       <section className={S["title-container"]}>
-        <img src={Logo} alt="Logo" />
+        <img
+          src={Logo}
+          alt="Livro com páginas visíveis, ilustrado em azul e branco, indicando acesso ao conhecimento ou leitura em andamento."
+        />
         <h1>Livros Vai na Web</h1>
       </section>
 

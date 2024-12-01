@@ -6,7 +6,10 @@ export default function FormToDonated() {
     <section className={S["form-container"]}>
       <form action="">
         <fieldset>
-          <img src={FormBook} alt="" />
+          <img
+            src={FormBook}
+            alt="Representação minimalista de um livro com capa azul, simbolizando leitura ou conteúdo educacional."
+          />
           <legend>Informações do Livro</legend>
 
           <label htmlFor="title">Titulo:</label>

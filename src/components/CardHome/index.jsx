@@ -15,25 +15,37 @@ export default function CardHome() {
       <section className={S["card-home-container"]}>
         <div className={S["card-home-content"]}>
           <div className={S["card-home-item"]}>
-            <img src={community} alt="" />
+            <img
+              src={community}
+              alt="Representação visual de um grupo de indivíduos conectados entre si."
+            />
             <p>
               Oferece livros a quem não tem acesso, ajudando a reduzir a
               exclusão social.
             </p>
           </div>
           <div className={S["card-home-item"]}>
-            <img src={reading} alt="" />
+            <img
+              src={reading}
+              alt="Silhueta de uma pessoa segurando um livro aberto com as mãos."
+            />
             <p>Estimula o hábito da leitura e o aprendizado contínuo.</p>
           </div>
           <div className={S["card-home-item"]}>
-            <img src={transform} alt="" />
+            <img
+              src={transform}
+              alt="Um punho fechado cercado por ícones de pessoas, representando um grupo unido."
+            />
             <p>
               Fornece conhecimento e inspiração, permitindo que indivíduos
               transformem suas vidas.
             </p>
           </div>
           <div className={S["card-home-item"]}>
-            <img src={balance} alt="" />
+            <img
+              src={balance}
+              alt="Ícone universalmente reconhecido como símbolo de justiça e imparcialidade."
+            />
             <p>
               Garante que todos, independentemente de sua condição, tenham
               oportunidades de aprendizado.
