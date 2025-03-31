@@ -9,7 +9,7 @@ export async function fetchBooks() {
       title: item.titulo,
       author: item.autor || "Autor desconhecido",
       genre: item.genero || "Gênero não informado",
-      urlImg: item.imagem || "https://via.placeholder.com/100",
+      urlImg: item.imagem_url || "https://via.placeholder.com/100",
     }));
   } catch (error) {
     throw new Error(error.message);
