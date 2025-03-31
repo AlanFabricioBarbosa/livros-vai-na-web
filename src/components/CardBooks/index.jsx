@@ -7,23 +7,20 @@ export default function CardBooks() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const storedBooks = localStorage.getItem("books");
-    if (storedBooks) {
-      setBooks(JSON.parse(storedBooks));
-      setLoaded(true);
-    } else {
-      async function loadBooks() {
-        try {
-          const booksData = await fetchBooks("javascript");
-          setBooks(booksData);
-          localStorage.setItem("books", JSON.stringify(booksData));
-          setLoaded(true);
-        } catch (error) {
-          console.error("Erro ao carregar livros:", error.message);
-        }
+    localStorage.removeItem("books");
+  
+    async function loadBooks() {
+      try {
+        const booksData = await fetchBooks();
+        setBooks(booksData);
+        localStorage.setItem("books", JSON.stringify(booksData));
+        setLoaded(true);
+      } catch (error) {
+        console.error("Erro ao carregar livros:", error.message);
       }
-      loadBooks();
     }
+  
+    loadBooks();
   }, []);
 
   if (!loaded) {
