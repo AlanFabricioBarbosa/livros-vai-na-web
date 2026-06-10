@@ -6,7 +6,34 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 100%;
   list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
+
+// Scrollbar personalizada
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #001b2f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #005695;
+  border-radius: 3px;
+
+  &:hover {
+    background: #00aaff;
+  }
+}
+

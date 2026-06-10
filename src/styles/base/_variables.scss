@@ -1,6 +1,36 @@
-$background-gradient: linear-gradient(90deg, #001b2f 0%, #005695 100%);
+// Paleta principal
+$background-gradient: linear-gradient(135deg, #001b2f 0%, #00376b 60%, #005695 100%);
+$background-gradient-light: linear-gradient(135deg, #003a6b 0%, #005695 100%);
 $primary-color: #ffffff;
-$secondary-color: #000000;
+$secondary-color: #0a0e1a;
 $tertiary-color: #005695;
-$quaternary-color: #0157944d;
-$font-family: "inter", sans-serif;
+$quaternary-color: rgba(0, 86, 149, 0.15);
+$accent-color: #00aaff;
+$accent-hover: #0088dd;
+$success-color: #00c896;
+$error-color: #ff4757;
+$text-muted: rgba(255, 255, 255, 0.7);
+$text-dark: #1a2340;
+$card-bg: rgba(255, 255, 255, 0.05);
+$card-border: rgba(255, 255, 255, 0.1);
+
+// Tipografia
+$font-family: "Inter", sans-serif;
+
+// Sombras
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.12);
+$shadow-md: 0 4px 20px rgba(0, 86, 149, 0.2);
+$shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.25);
+$shadow-glow: 0 0 30px rgba(0, 170, 255, 0.2);
+
+// Transições
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Border radius
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-lg: 20px;
+$radius-full: 9999px;
+

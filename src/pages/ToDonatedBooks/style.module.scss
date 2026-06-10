@@ -1,24 +1,111 @@
 @use "../../styles/base/variables" as *;
 
-.toDonatedBook-container {
-  @media (min-width: 769px) and (max-width: 1080px) {
-    height: 75vh;
-  }
-}
-
-.text-to-donated-container {
+.page-header {
+  background: $background-gradient;
+  padding: 3rem 8% 2.5rem;
   text-align: center;
-  font-family: $font-family;
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: $secondary-color;
-  margin-top: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
 
-  @media (max-width: 485px) {
-    font-size: 1.3rem;
-  }
-
-  @media (max-width: 360px) {
-    font-size: 1.1rem;
+  @media (max-width: 768px) {
+    padding: 2rem 1.25rem 1.75rem;
   }
 }
+
+.page-title {
+  font-family: $font-family;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: $primary-color;
+  letter-spacing: -0.03em;
+}
+
+.page-subtitle {
+  font-family: $font-family;
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 520px;
+  line-height: 1.55;
+}
+
+.donate-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.donate-info {
+  padding: 3.5rem 6% 3.5rem 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  @media (max-width: 900px) {
+    padding: 2.5rem 1.25rem 1rem;
+  }
+}
+
+.info-title {
+  font-family: $font-family;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  color: $text-dark;
+  letter-spacing: -0.02em;
+}
+
+.info-desc {
+  font-family: $font-family;
+  font-size: 1rem;
+  color: #5a6a7e;
+  line-height: 1.65;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-family: $font-family;
+  font-size: 0.95rem;
+  color: #3a4a5c;
+  font-weight: 500;
+}
+
+.benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: $radius-md;
+  background: rgba(0, 86, 149, 0.1);
+  color: $tertiary-color;
+  font-size: 0.9rem;
+}
+
+.donate-form {
+  background: #f7f9fb;
+  border-left: 1px solid rgba(0, 86, 149, 0.08);
+  min-height: 100%;
+
+  @media (max-width: 900px) {
+    border-left: none;
+    border-top: 1px solid rgba(0, 86, 149, 0.08);
+  }
+}
+
